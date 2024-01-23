@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><!--Este es el "ambiente" de html ahre-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Esto hace que se ajuste al dispositivo-->
+        <title>Registrar Venta</title>
+       <!--font awesome icons-->
+        <script src="https://kit.fontawesome.com/a797755358.js" crossorigin="anonymous"></script>
+       <!-- Bootstrap CSS -->
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+        <!--estilos-->
+            <link rel="stylesheet" href="css/index.css">
+        <!--Para tener la fuente Work Sans-->
+        <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Viga&family=Vollkorn&family=Work+Sans:wght@100;400&display=swap" rel="stylesheet">
+    </head>
+<body><!--el body es Todo lo que es blanco alrededor-->
+    <!--Aca empieza el cosito redondeado, todo lo que no es "blanco"-->
+    <main>
+
+
+            <!--HEADER:-->
+        <div>
+            <header  class="header">
+                <div class="headercontainer"> 
+                    <a class="logo" href="Cajera - Home.html"> <img class="spin" src="img/logoonly.png"   alt=" logo domus"> </a>
+                    <div class="nominm">
+                    <p class="domus" style="margin-top:1rem;margin-bottom:0rem;">Domus</p>
+                    <hr width="200rem" style="margin-top:0rem;margin-bottom:0rem"> 
+                    <p class="servinm">SERVICIOS INMOBILIARIOS</p> 
+                </div>
+                </div>
+                <div class="headersecundario"> 
+                    <p style="margin-left: 1rem; align-self: flex-end;" class="mini">@cajera | </p>
+                    <a href="index.html" class="mini" style="margin-left: 1rem; align-self: flex-end;"><i class="fas fa-user-circle"></i>    Cerrar sesión</a>
+                </div>
+            </header>
+        </div>
+
+
+
+
+        <!--BARRA DE NAVEGACION:   todos sus estilos estan en la seccion NAVBAR del css-->
+        <nav class="navbar" id="mynav">
+            <div class="navitem"><a href="Cajera - Home.html">Inicio</a></div>
+            <ul class="desplegable">
+                <li class="navitem"><a  href="Cajera - Pagos.html">Pagos</a>
+                    <ul> 
+                        <li class="navitem" style="margin-top:2rem;"><a  href="Alquiler - Pagos.html">Alquiler</a></li>
+                        <li class="navitem"><a  href="Ventas - Pagos.html">Ventas </a></li>
+                        <li class="navitem" style="margin-top:2rem;"><a  href="agendarcita.html">Entradas y Salidas </a>
+                                    <ul>
+                                        <li class="navitem"><a href="Entradas - Pagos.html">Entradas</a></li>
+                                    <li class="navitem"><a href="Salidas - Pagos.html">Salidas</a></li>
+                                  </ul>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navitem"><a  href="Cajera - Cierre de Caja.html">Cierre de Caja</a></div>
+            <div class="navitem"><a  href="Cajera - Consultas.html">Consultas</a></div>
+        </nav>
+                
+           
+        <!--CONTENIDO: aca dentro van a poner casi todo, es todo lo q no sea encabezado y piee de pagina-->
+        
+        <section class="content">
+        
+            <form>
+                <ul>
+                    <li><h2>Registrar Pago por Venta</h2></li>
+                        
+                    <li>
+                        <label for="codprop">Codigo de Propiedad: </label></div>
+                        <input type="cod" id="codprop" name="codprop">
+                        <label for="tipo">Tipo: </label>
+                        <select id="tipo" name="tipo" >
+                            <option value="sel">Seleccione</option>
+                            <option value="dpto">Departamento</option>
+                            <option value="viv">Vivienda</option>
+                        </select>
+                        <label for="precio">Precio del Inmueble: </label>
+                        <input type="cod" id="precio" name="precio">
+                    </li>
+                    <li>
+                        <label for="direccion">Direccion: </label>
+                        <input type="text" id="direccion" name="direccion">
+                        <label for="nro">N°: </label>
+                        <input type="nro" id="nro" name="nro" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                        <label for="piso">Piso: </label>
+                        <input type="nro" id="piso" name="piso" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                    </li>
+                    <li>
+                        <label for="barrio">Barrio: </label></div>
+                        <input type="cod" id="barrio" name="barrio">
+                        <label for="loc">Localidad: </label>
+                        <input type="cod" id="loc" name="loc">
+                        <label for="prov">Provincia: </label>
+                        <input type="cod" id="prov" name="prov">
+                    </li>
+                    <li>
+                        <label for="pais">Pais: </label>
+                        <input type="text" id="pais" name="pais">
+                    </li>
+                    <li>
+                        <label for="caract">Caracteristicas: </label></div>
+                        <label for="dorm">Dormitorios: </label></div>
+                        <input type="nro" id="dorm" name="dorm">
+                        <label for="banios">Baños: </label>
+                        <input type="nro" id="banios" name="banios">
+                        <label for="suit">Suits: </label>
+                        <input type="nro" id="suit" name="suit">
+                        <label for="mueb">Muebles: </label>
+                        <input type="nro" id="mueb" name="mueb">
+                    </li>
+                    <li>
+                        <label for="ant">Antigüedad: </label>
+                        <input type="cod" id="ant" name="ant">
+                        <label for="esp">Espacios: </label>
+                        <input type="nro" id="esp" name="esp">
+                    </li>
+                    <li>
+                        <label for="serv">Servicios Adheridos: </label>
+                        <input type="text" id="serv" name="serv">
+                    </li>
+                    <hr widht="200rem"></hr>
+                    <li>
+                        <label for="numcliente">N° Cliente: </label></div>
+                        <input type="cod" id="numcliente" name="numcliente">
+                        <label for="nomyap">Nombre/s y Apellido/s: </label></div>
+                        <input type="cod" id="nomyap" name="nomyap">
+                    </li>
+                    <li>
+                        <label for="dni">DNI: </label>
+                        <input type="cod" id="dni" name="dni">
+                        <label for="cuil">CUIL/CUIT: </label>
+                        <input type="cod" id="cuil" name="cuil">
+                    </li>
+                    <li>
+                        <label for="nro">Correo Electronico: </label>
+                        <input type="text" id="nro" name="nro">
+                        <label for="piso">Telefono: </label>
+                        <input type="cod" id="piso" name="piso" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                    </li>
+                    <hr widht="200rem"></hr>
+                    <li>
+                        <label for="venta">Tipo de Venta: </label>
+                        <select id="venta" name="venta" >
+                            <option value="sel">Seleccione</option>
+                            <option value="fin">Financiada</option>
+                            <option value="tot">Total</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="monto">Monto: </label>
+                        <input type="cod" id="monto" name="monto">
+                        <label for="comision">Comisión: </label>
+                        <input type="cod" id="comision" name="comision">
+                        <label for="moneda">Moneda: </label>
+                        <select id="moneda" name="moneda" >
+                            <option value="sel">Seleccione</option>
+                            <option value="pesos">Pesos</option>
+                            <option value="dolar">Dolares</option>
+                            <option value="euro">Euros</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label for="pago">Forma de Pago: </label>
+                        <select id="pago" name="pago" >
+                            <option value="sel">Seleccione</option>
+                            <option value="efect">Efectivo</option>
+                            <option value="debito">Tarjeta de Debito</option>
+                            <option value="credito">Tarjeta de Crédito</option>
+                        </select>
+                    </li>
+                </ul>   
+            </form>
+
+            <div id="overlay" class="overlay" onclick="off()">
+                
+                <div class="alertbox">
+                    <p>Venta Registrada con Exito</p>
+                    <button class="boton2" style="align-self: center;"><a style="color: white; text-decoration:none ;" href="Ventas - Pagos.html">Volver</a></button>
+                </div>
+              </div>
+            
+            <div style="margin-top: 1rem;">
+              <button class="boton2" onclick="on()">Enviar</button>
+            </div>
+
+
+        </section>
+
+        
+        
+
+
+
+
+
+      
+      <!--PIE DE PAGINA-->
+        
+      <footer class="footer" id="contacto" style=" text-align: center;">
+        <section><br>
+            
+            <p style="color:rgb(236, 236, 236);font-size:1.5rem; background-color: rgba(11, 17, 22, 0.932); padding: 0.8rem 0rem 0.8rem 0rem;">
+                DOMUS Inmobiliaria - Todos los derechos reservados        <br>                 @2021</p>        
+        </section><br>
+     </footer>
+
+
+
+
+
+    </main><!--Termina aca el bloque principal-->
+
+    <!--Aca va un script para hacer que se scrollee fixeado el navbar  NO TOCAR   -Isa  -->
+    <script>
+        window.onscroll = function() {myFunction()};
+        var navbar = document.getElementById("mynav");
+        var sticky = navbar.offsetTop;
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            navbar.classList.add("sticky");
+          } else {
+            navbar.classList.remove("sticky");
+          }
+        }
+    </script>
+    <!--Script para poder usar bootstrap-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <!--Script para overlay-->
+    <script>
+        function on() {
+          document.getElementById("overlay").style.display = "flex";
+        }
+        
+        function off() {
+          document.getElementById("overlay").style.display = "none";
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,381 @@
+html{
+    font-size: 62.5%; /*para que 1 rem = 10 px*/
+    margin:0; padding:0; font-family:'Work Sans','sans-serif';  /* esto se llama fallback, poner fuentes de repuesto*/
+}
+*{box-sizing: border-box;}
+p{color:rgb(29, 29, 29);
+    font-size: 1.4rem;
+}
+.overlay {
+    position:fixed;
+     display:none;
+     justify-content: center; align-content: center;
+     width:100%;
+     height: 100%;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background-color: rgba(17, 27, 26, 0.568);
+     z-index: 3; cursor: pointer;
+   }
+
+body{
+   background-color: #C1CAC8;
+    text-align:center; font-size: 1.4rem;
+}
+main{
+    background-color: #FFFEFE;
+    background-image: url('fondo.jpg');
+    background-repeat: no-repeat;
+   background-position-y: 30vh;
+    background-size: contain; 
+    border-radius: 41px;
+    margin: 8vh 8vh 8vh 8vh; overflow:hidden;
+}
+
+.alertbox{ /*va dentro del overlay, usa la clase .boton2*/
+    font-size: 50px;
+    color: white;
+    display:flex; justify-self: center; align-self: center; flex-flow: column wrap;
+    align-content: center; justify-content: space-around;
+    margin-top: 5%;
+    width: fit-content; padding: 3rem 7rem ;
+    min-height: 20vh; 
+    background-color: #e5f1eff3; 
+    border-radius: 20px; 
+}
+/*=====HEADER=======*/
+.header{ /*contiene a headercontainer y headersec.  con esto los separo en eje x, centro en eje y*/
+    padding: 2rem 1rem 0.5rem 1rem; margin:0rem;
+    display: flex; flex-flow: row wrap;
+    justify-content:space-between;
+    align-content:center;
+}
+.headercontainer{ 
+   display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-flow: row wrap;
+}
+.headersecundario{
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end; align-items:flex-end ;
+    padding:0; margin:0;
+}
+.logo{
+    display:flex; 
+    align-self: center; 
+    justify-self: flex-start;
+}
+.spin{
+    height: 12rem;
+    transition-timing-function: ease;
+    transition: transform 2s, height 2s ;
+    transition-delay: 0s;
+}
+.spin:hover{
+    height: 14rem;transform: rotate(360deg);
+}
+.nominm{
+    display: block;
+    text-align: left;
+    align-content: left;
+    flex-flow: column wrap;
+}
+.domus{
+    font-family: 'Viga', sans-serif;
+    font-size: 4rem;
+    color: black;
+}
+.servinm{
+    font-family:'Vollkorn', serif;
+    font-size: 1.5rem;
+    color: black;
+
+}
+/*===================*/
+
+
+/*=====NAVBAR======*/
+.navbar{
+    display:flex;  align-items: center;
+    background-color: #02475E;
+    padding:0.8rem; margin-top:0;
+    justify-content:center; position: sticky; z-index: 3;
+    align-content: stretch; flex-wrap: wrap;
+}
+.navitem{
+    display:flex;
+    padding: 1.2%; padding-top:0.2%;padding-bottom:0.2%;
+    margin:0.1rem 4% 0.1rem 4% ;
+    transition-timing-function: ease;
+    transition: transform 0.8s, background-color 0.8s ;
+    transition-delay: 0.02s;border-radius: 15%;   
+}
+.navitem:hover{
+    background-color: rgba(255, 255, 255, 0.329);
+    transform: scale(1.15, 1.1); font-size:unset;
+}
+.navitem a{
+    color:rgb(255, 255, 255);   font-size: 2rem;
+    text-decoration: none; transition-timing-function: ease; transition: color 0.5s,
+}
+.navitem a:hover{  color:rgb(255, 253, 241);   }
+.sticky { position: fixed;top: 0; width: 100%; }
+/*===================*/
+
+
+/*===== INSERTE AQUI CONTENIDO DE LA PAGINA=====*/
+
+.content{ /*esto encapsula todo lo que pongan pa que no se desborde*/
+    background: rgba(201, 224, 224, 0.068); min-height:80vh;
+    margin: 1rem 5rem 5rem 5rem;    /* por cierto rem es la unidad de medida que se usa
+                                    y asi como pongo estoy asignando el margen de, respectivamente: 
+                                    arriba, derecha, abajo, izquierda, osea a reloj*/
+}
+.divbienvenido{
+    position: absolute;
+    width: 1158px;
+    height: 137px;
+    top: 530px;
+    background: #FEFAFA;
+    border: 1px solid #807171;
+    border-radius: 20px;
+    }
+    .textobienvenido{
+        position: absolute;
+        width: 613px;  height: auto;
+        left: 50px; top: 1rem; font-family: Work Sans;
+        font-size: 50px;  color: #073d50;
+        }
+    .textoengris{
+            position: absolute;
+            height: auto;  left: 7rem;  top: 8rem;
+            font-family: Work Sans; font-size: 2rem; line-height: 4rem;
+            color: #7E8081;
+            }
+ /*formato para todos los formularios*/
+ form{
+    width: 80%;
+    height:50%;  /*modifique tamaño*/
+    margin-left: 10%;/*agregue esto*/
+    margin-top: 5%; /*y esto* saque lo de min */ 
+    background:#c1cac8c7;
+    border-radius:20px;
+    box-shadow:0 0 40px -10px #000;
+    padding:1rem 0.5rem;
+    box-sizing:border-box;
+    font-family:'Work Sans',sans-serif;
+    position:static; /*esto cambien 3 veces probando si que ya no se cual era el que estaba antes o si es el mismo*/
+    display: block;/*tambie agregue esto display y el de text-align pues boba por eso me quedaba en el medio*/
+    text-align: start;
+}
+
+h2{
+    align-content: flex-end;
+    margin:1rem 0;
+    padding-bottom:1rem; font-weight: bold;
+    color: #000;
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+}
+input{
+    width: 50rem;
+    padding:0.5rem;
+    margin: 1rem;
+    box-sizing:border-box;
+    border:10px;
+    font-family:'Work Sans';
+    transition:all .3s;
+    border-bottom:2px solid #bebed2;
+    border-radius: 20px;
+}
+input:focus{
+    border:3px solid #09617e /*aca le puse mas gruesito lo de el borde cuando seleccionamos*/
+}
+/*agregue esto para que texto sea igual que los otros*/
+input[type=text]{
+    width: 30rem;
+    padding:0.5rem;
+    box-sizing:border-box;
+    border:10px;
+    font-family:'Work Sans';
+    transition:all .3s;
+    border-bottom:2px solid #bebed2;
+    border-radius: 20px;
+    margin: 1rem;
+}
+input[type=text]:focus{
+    border:3px solid #09617e
+}
+
+label{
+margin:1rem 0 0 0.5rem;
+color: #000;;
+font-size: 15px;
+font-family: 'Work Sans';
+}
+select{ /*esto tambien modifique */
+width: 15rem;
+height: 3rem;
+font-family:'Work Sans';
+border-radius: 20px;
+border: 10px;
+}
+
+
+
+            
+
+/*Nadia- BUSQUEDA DEL CLIENTE AAAAAAAAAAA---*/
+.box{
+    display:flex; width:max-content;
+    align-items: center;
+    padding:2rem; 
+    margin-top:0;
+}
+.botones{
+    width: max-content; padding: 1rem  6rem;
+    height: 5rem;
+    margin:1rem 1rem 1rem 1rem ;
+}
+.searchbox{  
+    display:flex; flex-flow: column wrap; align-self:center; justify-self: center;
+    align-items: center;
+    margin: 10% 15%;
+    height: 25rem; 
+    background-color: #c1cac8b4; 
+    border-radius: 20px; 
+}
+
+h4{
+    display: flex;  align-content: flex-end;
+    font-family: 'Work Sans'; font-style: normal; font-weight: bold; font-size: 30px;
+    line-height: 33px;  color: #000000;  padding: 1%;
+}
+.boton2 {
+    border: 2px solid #02475E;    background-color: #02475E; 
+    color: #ffffff;    text-decoration: none; 
+    font-family: 'Work Sans';   font-weight: bold;   font-size: 1.5rem;
+    border-radius: 10px; 
+    height: fit-content;  width: fit-content; 
+    padding: 1rem 3rem 1rem 3rem;
+}
+/*------------Clientes----------------*/
+/*.celestito { 
+    padding: 0.8rem 0rem 2rem 2rem;
+    background: rgba(193, 202, 200, 0.85);
+    border-radius: 20px;
+    justify-content: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}*/
+/*.cajaagenda{
+    width: 80%;
+    height:50%;  
+    margin-left: 10%;  margin-top: 5%;  
+    background:#c1cac8c7;  border-radius:20px; box-shadow:0 0 40px -10px #000;
+    padding:1rem 0.5rem;
+    box-sizing:border-box;  font-family:'Work Sans',sans-serif;
+    position:static;   display: block;  text-align: center;       
+}*/
+
+
+/*------------Solicitudes------------*/
+.rec301{
+    width: 60%;   height:60%;  /*modifique tamaño*/
+    margin-left: 20%;/*agregue esto*/
+    margin-top: 5%;  
+    background: #5a525200; /*sin nada para que no se vea pero me ayude a ubicar*/
+    position:static;
+    border-radius:20px;
+    box-shadow:0 0 40px -10px #000;
+    padding:1rem 0.5rem;
+    box-sizing:border-box;
+    /*prueba ahora*/
+    display:block;
+}
+
+/*-----------lo de boton desplegable-----*/
+ul, ol{   list-style: none; /*pa que desaparezcan los puntitos*/}
+.desplegable{ margin:0 2rem; padding:0;}
+.desplegable >li {
+    float: left; /*pa q esten de costaditos*/
+}
+
+.desplegable li ul {
+    display: none; /*aca desaparecen*/ box-sizing: border-box;
+    position: absolute; 
+    width: 260px; height:fit-content;
+}
+.desplegable li:hover > ul{ /*para que aparezcan el submenu*/
+    display: block;
+}
+.desplegable li ul li{ /*pa el submenu alado*/
+    position: relative; 
+}
+.desplegable li ul li ul{/*para q apararezca el la sub-subclase*/
+    right: -115%; width:fit-content;
+    top:-1rem;
+}
+/*test de isa*/
+.desplegable ul { padding:0;}
+ul.desplegable {padding: 1.2%;padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    margin: 0.1rem 4% 0.1rem 4%;}
+.desplegable ul li a{ font-size: 1.5rem; color:white; display:flex;
+    text-align: center; flex-flow: row wrap; justify-items: center;
+} 
+.desplegable ul li{ width: 9vw;padding:1rem 1.5rem;margin: 1rem 1rem 0.1rem 1rem;}
+.desplegable .navitem {background-color:#004258c2; border-radius: 10px; }
+
+
+/*===================*/
+
+
+    /*FOOTER*/
+        .footer{
+            display:block; background-color: #02475E;font-size: 1.5rem;
+            font-family: 'Work Sans',sans-serif; align-content: center; justify-content: center;
+        }
+        footer i{
+            align-self: flex-start; justify-self: flex-start;
+            color:rgb(0, 0, 0); margin:1rem 1rem 0rem 0rem; font-size:3rem;
+        }
+        .mini{align-self: right; margin:0; padding:0; color:black; text-decoration: none;}
+        .headersecundario a.mini:hover {text-decoration: underline ; color:rgb(21, 45, 53)}
+        footer h3{
+            display:flex;  align-self: center; color:black;
+            padding:0rem 1rem 0rem 1rem;  margin-top:3rem;font-size:2.5rem; 
+            text-decoration: underline; font-family: Arial, Helvetica, sans-serif; font-weight: 900;
+        }
+        .piecito{
+            display:flex; width: fit-content;
+            font-family: 'Work Sans',sans-serif;
+            font-size: 1rem;
+            color:black;
+            flex-flow: column wrap;
+            text-align: left;
+            padding: 2rem;
+        }
+        /*===================*/
+
+        /*SECRETARIA AGENDA */
+    .cajaagenda{
+        width: 80%;
+        height:50%;  
+        margin-left: 10%;  margin-top: 5%;  
+        background:#c1cac8c7;  border-radius:20px; box-shadow:0 0 40px -10px #000;
+        padding:1rem 0.5rem;
+        box-sizing:border-box;  font-family:'Work Sans',sans-serif;
+        position:static;   display: block;  text-align: center;       
+    }
+    .textogris{
+        display: flex; justify-content: center; align-content:center;
+        margin-top: 3rem; margin-bottom: 0;
+        font-family: Work Sans;  font-style: normal; font-weight: normal;  font-size: 24px;
+        line-height: 28px;  color: #000;    
+    }
+    .img{position: relative; margin: auto;   display: block;   height: 60vh;  width: 100vh;  }
+/*===================*/
